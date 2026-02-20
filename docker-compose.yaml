@@ -8,7 +8,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - "3306:3314"
+      - "3314:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -22,7 +22,7 @@ services:
       PMA_USER: ${PMA_USER:-root}
       PMA_PASSWORD: ${PMA_PASSWORD:-root_password}
     ports:
-      - "8080:80"
+      - "8082:80"
     depends_on:
       - mysql
     networks:
